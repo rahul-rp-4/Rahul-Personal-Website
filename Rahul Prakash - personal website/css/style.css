@@ -270,7 +270,7 @@ ul.submenu li a.active {
 
 /* footer */
 footer {
-    background: url(/personal/web/pics/397kb.jpg) no-repeat top;
+    background: url(../pics/397kb.jpg) no-repeat top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
