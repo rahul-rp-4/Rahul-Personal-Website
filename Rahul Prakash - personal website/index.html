@@ -170,7 +170,7 @@
 							</div>
 						</div>
 						<h3>App Development</h3>
-						<p>Efficient yet minimalist and better looking Android and IOS apps.</p>
+						<p>Efficient, minimalist  Android and IOS apps.</p>
 					</div>
 				</div>
 				<div class="col-lg-4">
@@ -182,7 +182,7 @@
 								</div>
 							</div>
 						</div>
-						<h3>Graphic Design</h3>
+						<h3>Graphic Designing</h3>
 						<p>Turn your ideas into visual concepts.</p>
 					</div>
 				</div>
@@ -198,7 +198,7 @@
 							</div>
 						</div>
 						<h3>Software Development</h3>
-						<p>Future-proof and Power-efficient Softwares.</p>
+						<p>Future-proof and Power-efficient Softwares for pc.</p>
 					</div>
 				</div>
 				<div class="col-lg-4">
@@ -224,7 +224,7 @@
 							</div>
 						</div>
 						<h3>Content Creation</h3>
-						<p>Content creation of mobile games and an Esports player</p>
+						<p>Content creation of mobile games and an Esports player in BGMI </p>
 					</div>
 				</div>
 			</div>
@@ -419,7 +419,7 @@
 		<div class="container py-xl-5 py-lg-3">
 			<h3 class="tittle text-center text-bl mb-sm-5 mb-4">Talk to me !</h3>
 			<div class="contact-form mx-auto text-center">
-				<!--<form method="post" action="#">-->
+				<!--<form method="post" action="#">
 					<div class="row">
 						<div class="col-lg-6 form-group">
 							<input type="text" class="form-control" placeholder="Name" name="name" id="name">
@@ -441,7 +441,38 @@
 						<div class="noemail" id="noemail">Enter a valid E-mail!</div>
 						<div class="noemail" id="noname">Enter a valid Name!</div>
 					</div>
-				<!--</form>-->
+				</form>-->
+				<form id="gform" name="form" method="post" onsubmit="return validate();" action="https://script.google.com/macros/s/AKfycbySTBhd5vKp93f4mVv0HA2UQcQRe3u-hYJKT6nwSvWo24sbczYxISAIB4raMFtxkD7IgA/exec">
+					<div class="row">
+					  <div class="col-md-12 mb-3">
+					  <div >
+						<input type="text" class="form-control" name="name" id="name1" placeholder="Your Name" >
+					  </div>
+					  </div>
+					  <div class="col-md-12 mb-3">
+					  <div >
+						<input type="text" class="form-control" name="email" id="email" placeholder="Your Email" >
+					  </div>
+					  </div>
+					  <div class="col-md-12 mb-3">
+					  <div >
+						<input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" >
+					  </div>
+					  </div>
+					  <div class="col-md-12">
+					  <div class="form-group">
+						<textarea id="message" class="form-control" name="message" rows="5" placeholder="Message" ></textarea>
+					  </div>
+					  </div>
+					  <br>
+					  <br>
+					  <br>
+					  <br>
+					  <div class="col-md-12 text-center">
+					  <button onclick="validate()"  button-a button-big button-rouded type="submit" >Send Message</button>
+					  </div>
+					</div>
+					</form>
 			</div>
 		</div>
 		
@@ -490,6 +521,47 @@
 	<a href="#home" class="move-top text-center"></a>
 	<!-- //move top icon -->
 	<script src="main.js"></script>
+	<script>
+		function validate(){
+		var n=document.getElementById("name1").value;
+		var e=document.getElementById("email").value;
+		var p=document.getElementById("phone").value;
+		var m=document.getElementById("message").value;
+		var atp=e.indexOf("@")
+		var dtp=e.indexOf(".")
+		if(n==null||n==""){
+		alert("Enter Name")
+		window.history.back();
+		return false
+		
+		}
+		else if(e==null||e==""){
+		alert("Enter Email ID")
+		return false
+		}
+		
+		else if (atp<1||dtp<atp+2||dtp+2>n.lenght){
+		alert("Enter Valid Email")
+		return false
+		}
+		else if (p==null||p==""){
+		alert("Enter Phone Number")
+		return false
+		}
+		else if(isNaN(p)){
+		alert("Please only enter numeric characters ")
+		return false
+		}
+		else if(m==null||m==""){
+		alert("Please type a message")
+		return false
+		}else{
+		return true
+		}
+		
+		
+		}
+	  </script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
 </body>
 
